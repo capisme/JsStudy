@@ -5,11 +5,6 @@ import time
 import requests
 
 
-
-
-import requests
-
-
 headers = {
     "authority": "jad-api.jin10.com",
     "accept": "application/json, text/plain, */*",
