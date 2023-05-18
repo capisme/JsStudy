@@ -1,0 +1,6 @@
+pip install blackboxprotobuf    不需要装protobuf,会自动装上
+protoc  换成3.10
+
+输出proto     protoc --python_out=./ test.proto
+反序列化:      protoc --decode_raw<people.bin
+

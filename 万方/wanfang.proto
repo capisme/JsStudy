@@ -1,0 +1,36 @@
+syntax = 'proto3';   //固定写法
+//# params = {
+//# currentPage: 1
+//# pageSize: 20
+//# searchFilter: [0]
+//# searchScope: 0
+//# searchSort: {__ob__: Mt}
+//# searchType: "paper"
+//# searchWord: "爬虫"
+//# }
+//{"searchType":"paper","searchWord":"爬虫","currentPage":1,"pageSize":20,"searchFilter":[0],"searchSort":{"field":"","order":1},"searchScope":0}
+message SearchService{
+  enum SearchFilter {
+    A = 0;
+  }
+  message CommonRequest {
+    message SearchSort {
+      string  B = 1;
+      int32 C = 2;
+    }
+    string searchType = 1;
+    string searchWord = 2;
+    int32 currentPage = 3;
+    int32 pageSize = 4;
+    repeated SearchFilter  searchFilter = 5;
+    repeated SearchSort  searchSort = 6;
+    int32 searchScope = 7;
+  }
+  message SearchRequest{
+    CommonRequest commonRequest = 1;
+  }
+}
+
+
+
+
